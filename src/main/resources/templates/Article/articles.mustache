@@ -1,0 +1,24 @@
+{{>layouts/headers}}
+
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Title</th>
+        <th scope="col">Content</th>
+    </tr>
+    </thead>
+    <tbody>
+    {{#articleList}}
+        <tr>
+            <th>{{id}}</th>
+            <td><a href="/articles/{{id}}" class="link-secondary">{{title}}</a></td>
+            <td>{{content}}</td>
+        </tr>
+    {{/articleList}}
+    </tbody>
+</table>
+<div class="p-1">
+<a href="/articles/new" class="btn btn-outline-primary btn-sm">New Article</a>
+</div>
+{{>layouts/footer}}
